@@ -1,3 +1,77 @@
-h1{
-    color: red;
+*{
+    margin: 0 ;
+    padding: 0;
+}
+
+/* This is Common Section */
+.common-btn{
+   padding: 12px 42px;
+   background: #1D4ED8;
+   color: white;
+   border-radius: 10px;
+   border: none;
+}
+
+/* This is Header Section */
+
+.hed-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    margin: 24px auto;
+
+}
+
+ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content:center;
+    gap: 24px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #575757;
+
+}
+
+
+/* This is Hero Secton */
+.hero-container{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1550px;
+    height: 788px;
+    margin:auto;
+    background-image: url(./assets/banner.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.hero-container .hero-content{
+    text-align: center;
+    color: white;
+    width: 830px;
+}
+
+.hero-content h1{
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 136px;
+    margin-bottom: 16px;
+}
+
+.hero-content p{
+    margin-bottom: 400px;
+    color: #FFFFFF;
+}
+
+.hero-content .hero-btn{
+    font-size: 20px;
 }
