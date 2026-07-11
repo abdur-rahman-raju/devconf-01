@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    font-family: "Inter", sans-serif;
+}
+
 /* This is Common Section */
 .common-btn{
    padding: 12px 42px;
@@ -222,4 +226,758 @@ footer{
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+/* ==========================================
+   DEVCONF 2026
+   AI Networking Match Section
+========================================== */
+
+:root{
+    --primary:#2563eb;
+    --primary-hover:#1d4ed8;
+
+    --background:#f8fafc;
+    --white:#ffffff;
+
+    --text:#0f172a;
+    --muted:#64748b;
+
+    --border:#e2e8f0;
+
+    --radius:20px;
+    --radius-sm:14px;
+    --radius-pill:999px;
+
+    --shadow:
+        0 15px 40px rgba(15,23,42,.08);
+
+    --transition:.3s ease;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.network-section{
+
+    padding:80px 20px;
+    background:var(--background);
+
+}
+
+.network-container{
+
+    width:100%;
+    max-width:1440px;
+
+    margin-inline:auto;
+
+}
+
+.section-heading{
+
+    max-width:760px;
+    margin-inline:auto;
+    margin-bottom:60px;
+
+    text-align:center;
+
+}
+
+.section-label{
+
+    color:var(--primary);
+
+    font-size:.95rem;
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+.section-heading h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    line-height:1.2;
+
+    color:var(--text);
+
+    margin-bottom:18px;
+
+}
+
+.section-heading p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+}
+
+.network-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:48px;
+
+    align-items:start;
+
+}
+
+.network-card{
+
+    background:var(--white);
+
+    border-radius:20px;
+
+    padding:36px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.network-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.network-card h3{
+
+    font-size:1.5rem;
+
+    color:var(--text);
+
+    margin-bottom:30px;
+
+}
+
+.form-group{
+
+    margin-bottom:28px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+select,
+textarea{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    background:#fff;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:var(--transition);
+
+}
+
+select{
+
+    cursor:pointer;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    min-height:130px;
+
+}
+
+select:focus,
+textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* ==========================================
+   PART 2
+   Chips • Buttons • Result Card • Match Cards
+========================================== */
+
+/* ---------- Interest Chips ---------- */
+
+.chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.chip{
+    cursor:pointer;
+}
+
+.chip input{
+    display:none;
+}
+
+.chip span{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 16px;
+
+    border:1px solid var(--border);
+    border-radius:var(--radius-pill);
+
+    background:#fff;
+
+    color:var(--text);
+
+    font-size:.9rem;
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.chip:hover span{
+
+    border-color:var(--primary);
+    color:var(--primary);
+
+}
+
+.chip input:checked + span{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ---------- Buttons ---------- */
+
+.primary-btn{
+
+    width:100%;
+
+    padding:16px 20px;
+
+    border:none;
+    outline:none;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.primary-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 14px 28px rgba(37,99,235,.25);
+
+}
+
+.primary-btn:active{
+
+    transform:translateY(0);
+
+}
+
+.secondary-btn{
+
+    margin-top:16px;
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#eff6ff;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.secondary-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ---------- Result Card ---------- */
+
+.result-card{
+
+    min-height:720px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+.empty-state,
+.loading-state{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.robot{
+
+    font-size:60px;
+
+    margin-bottom:18px;
+
+}
+
+.empty-state h3{
+
+    color:var(--text);
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+}
+
+.loading-state p{
+
+    margin-top:18px;
+
+    color:var(--muted);
+
+    font-size:1rem;
+
+}
+
+/* ---------- Results ---------- */
+
+.results{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+/* ---------- Match Card ---------- */
+
+.match-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+    padding:22px;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    transition:var(--transition);
+
+    background:#fff;
+
+}
+
+.match-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(15,23,42,.08);
+
+}
+
+.match-card img{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    flex-shrink:0;
+
+}
+
+.match-content{
+
+    flex:1;
+
+}
+
+.top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.top h4{
+
+    font-size:1.1rem;
+
+    color:var(--text);
+
+    margin-bottom:6px;
+
+}
+
+.top p{
+
+    color:var(--muted);
+
+    line-height:1.6;
+
+}
+
+/* ---------- Badge ---------- */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    white-space:nowrap;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#dbeafe;
+
+    color:var(--primary);
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+}
+
+.match-content > p{
+
+    margin-top:16px;
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+}
+
+/* ---------- Utility ---------- */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ==========================================
+   PART 3
+   Animations • Responsive • Final Polish
+========================================== */
+
+/* ---------- Loading Spinner ---------- */
+
+.loader{
+
+    width:48px;
+    height:48px;
+
+    margin:0 auto;
+
+    border:4px solid #dbeafe;
+    border-top-color:var(--primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+/* ---------- Fade Animation ---------- */
+
+.empty-state,
+.loading-state,
+.results{
+
+    animation:fadeUp .45s ease;
+
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:992px){
+
+    .network-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .result-card{
+
+        min-height:auto;
+
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+    .network-section{
+
+        padding:60px 18px;
+
+    }
+
+    .network-card{
+
+        padding:24px;
+
+    }
+
+    .section-heading{
+
+        margin-bottom:40px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:2rem;
+
+    }
+
+    .chips{
+
+        gap:10px;
+
+    }
+
+    .chip span{
+
+        font-size:.85rem;
+
+        padding:9px 14px;
+
+    }
+
+    .match-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .match-card img{
+
+        width:90px;
+        height:90px;
+
+    }
+
+    .top{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:12px;
+
+    }
+
+    .secondary-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ---------- Small Mobile ---------- */
+
+@media (max-width:480px){
+
+    .network-section{
+
+        padding:50px 16px;
+
+    }
+
+    .network-card{
+
+        padding:20px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:1.75rem;
+
+    }
+
+    .section-heading p{
+
+        font-size:.95rem;
+
+    }
+
+    select,
+    textarea{
+
+        font-size:14px;
+
+        padding:14px 16px;
+
+    }
+
+    .primary-btn{
+
+        font-size:.95rem;
+
+        padding:15px;
+
+    }
+
+    .badge{
+
+        font-size:.75rem;
+
+        padding:7px 12px;
+
+    }
+
+}
+
+/* ---------- Accessibility ---------- */
+
+button:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+
+    outline:3px solid rgba(37,99,235,.25);
+    outline-offset:2px;
+
+}
+
+/* ---------- Smooth Scrolling ---------- */
+
+html{
+
+    scroll-behavior:smooth;
+
 }

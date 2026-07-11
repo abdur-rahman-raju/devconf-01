@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -164,6 +167,255 @@
     </div>
 
    </section>
+
+   <!-- AI Section -->
+    <section class="network-section" id="networking-match">
+
+    <div class="network-container">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                Networking Assistant
+            </p>
+
+            <h2>
+                Find Your Perfect Networking Match
+            </h2>
+
+            <p>
+                Let AI recommend the most valuable speakers and attendees to
+                connect with based on your role, interests, and goals.
+            </p>
+
+        </div>
+
+        <div class="network-grid">
+
+            <!-- LEFT -->
+
+            <aside class="network-card">
+
+                <h3>Tell us about yourself</h3>
+
+                <form id="matchForm">
+
+                    <div class="form-group">
+
+                        <label for="role">
+                            Your Role
+                        </label>
+
+                        <select id="role">
+
+                            <option>Student</option>
+                            <option>Frontend Developer</option>
+                            <option>Backend Developer</option>
+                            <option>Full Stack Developer</option>
+                            <option>Mobile Developer</option>
+                            <option>AI Engineer</option>
+                            <option>Data Scientist</option>
+                            <option>DevOps Engineer</option>
+                            <option>Founder</option>
+                            <option>Product Manager</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="experience">
+                            Experience Level
+                        </label>
+
+                        <select id="experience">
+
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+                            Interests
+                        </label>
+
+                        <div class="chips">
+
+                            <label class="chip">
+                                <input type="checkbox">
+                                <span>Artificial Intelligence</span>
+                            </label>
+
+                            <label class="chip">
+                                <input type="checkbox">
+                                <span>Web Development</span>
+                            </label>
+
+                            <label class="chip">
+                                <input type="checkbox">
+                                <span>Cloud Computing</span>
+                            </label>
+
+                            <label class="chip">
+                                <input type="checkbox">
+                                <span>Cybersecurity</span>
+                            </label>
+
+                            <label class="chip">
+                                <input type="checkbox">
+                                <span>DevOps</span>
+                            </label>
+
+                            <label class="chip">
+                                <input type="checkbox">
+                                <span>Mobile</span>
+                            </label>
+
+                            <label class="chip">
+                                <input type="checkbox">
+                                <span>Machine Learning</span>
+                            </label>
+
+                            <label class="chip">
+                                <input type="checkbox">
+                                <span>Open Source</span>
+                            </label>
+
+                            <label class="chip">
+                                <input type="checkbox">
+                                <span>Startups</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="goal">
+                            Goal
+                        </label>
+
+                        <textarea
+                            id="goal"
+                            rows="5"
+                            placeholder="I want to meet people working in AI startups and learn about LLMs."
+                        ></textarea>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="findBtn"
+                    >
+                        ✨ Find My Matches
+                    </button>
+
+                </form>
+
+            </aside>
+
+            <!-- RIGHT -->
+
+            <div class="network-card result-card">
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                >
+
+                    <div class="robot">
+                        🤖
+                    </div>
+
+                    <h3>
+                        Your AI networking recommendations will appear here.
+                    </h3>
+
+                </div>
+
+                <div
+                    class="loading-state hidden"
+                    id="loadingState"
+                >
+
+                    <div class="loader"></div>
+
+                    <p>
+                        Analyzing your profile...
+                    </p>
+
+                </div>
+
+                <div
+                    class="results hidden"
+                    id="results"
+                >
+
+                    <!-- Repeat Cards -->
+
+                    <article class="match-card">
+
+                        <img
+                            src="images/profile1.jpg"
+                            alt="Demis Hassabis"
+                        >
+
+                        <div class="match-content">
+
+                            <div class="top">
+
+                                <div>
+
+                                    <h4>Demis Hassabis</h4>
+
+                                    <p>
+                                        Co-Founder & CEO,
+                                        Google DeepMind
+                                    </p>
+
+                                </div>
+
+                                <span class="badge">
+                                    98% Match
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Shared interests in Artificial Intelligence
+                                and Machine Learning.
+                            </p>
+
+                            <button class="secondary-btn">
+                                View Profile
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Duplicate same structure for Andrej & Mustafa -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<link rel="stylesheet" href="css/networking.css">
+<script src="js/networking.js"></script>
 
    <!-- fottar setion -->
     <footer>
