@@ -75,3 +75,114 @@ ul li a{
 .hero-content .hero-btn{
     font-size: 20px;
 }
+
+
+/* Speaker Section */
+.spekar-Container{
+    max-width: 1440px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.spekar-Container h2{
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.spekar-Container .card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card-container .card-box{
+    text-align: start;
+}
+
+.card-box .card-text{
+    padding: 25px;
+}
+
+.card-container .card-box img{
+    border-radius: 10px;
+}
+
+.card-box .p-1{
+    font-size: 12px;
+    font-weight: 700;
+    color: #1D4ED8;
+    margin-bottom: 10px ;
+}
+
+.card-text h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px ;
+}
+
+.card-text p{
+    font-size: 14px;
+    color: #575757;
+}
+
+/* Spot Sectopn */
+.spot-container{
+    max-width: 1440px;
+    margin: auto;
+    text-align: center;
+}
+
+.spot-container h1{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.spot-container .p-m{
+    font-size: 16px;
+    color: #575757;
+}
+
+.spot-container .spot-m-content{
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.spot-m-content .spot-content{
+    border: 1px solid #ece8e8;
+    /* height: 444px; */
+}
+
+.spot-content .spot-card{
+    margin: 18px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.spot-faris p{
+    font-size: 16px;
+    color: #575757;
+    margin-bottom: 10px;
+}
+
+.spot-card h2{
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.list-items{
+    margin-top: 10px;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.spot-btn{
+    background: none;
+    color: #1D4ED8;
+    border: 1px solid #575757;
+}
